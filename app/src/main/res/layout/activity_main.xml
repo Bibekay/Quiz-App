@@ -18,16 +18,20 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
         android:text="Highscore:0"
-        android:textSize="20dp"
-
-        />
+        android:textSize="25dp"
+        android:fontFamily="serif" />
 
     <Button
         android:id="@+id/button_start_quiz"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:text="Start Quiz" />
+        android:text="Start Quiz"
+        android:fontFamily="serif"
+        android:background="@drawable/custom_button"/>
+
+
+    />
 
 
 </RelativeLayout>
