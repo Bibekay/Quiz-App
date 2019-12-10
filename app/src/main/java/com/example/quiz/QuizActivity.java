@@ -161,9 +161,12 @@ public class QuizActivity extends AppCompatActivity {
             if (answerNr == currentQuestion.getAnswerNr()){
                 score++;
                 textViewScore.setText("Score:" + score);
-            } else
+                showNextQuestion();
+            }
+            else{
+                showSolution();
+            }
 
-            showSolution();
         }
             private void showSolution(){
             rb1.setTextColor(Color.RED);
@@ -173,17 +176,17 @@ public class QuizActivity extends AppCompatActivity {
             switch (currentQuestion.getAnswerNr()){
                 case 1:
                     rb1.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getAnswerNr());
+                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getOption1());
                     break;
 
                 case 2:
                     rb2.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getAnswerNr());
+                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getOption2());
                     break;
 
                 case 3:
                     rb3.setTextColor(Color.GREEN);
-                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getAnswerNr());
+                    textViewQuestion.setText("The currect answer is:" + currentQuestion.getOption3());
                     break;
 
             }
